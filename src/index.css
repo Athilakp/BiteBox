@@ -1,69 +1,156 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+/* Header */
+.header {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  background-color: #fff; /* Background color for header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-bottom: 1px solid #eee; /* Light bottom border */
+  height: 65px;
+  padding: 0 20px; /* Padding for better spacing */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.logo-container img {
+  width: 120px; /* Slightly larger logo */
+  object-fit: cover;
 }
 
-button {
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items ul li {
+  margin: 0 15px; /* Horizontal space between items */
+  padding: 10px 15px; /* Padding around items */
+  cursor: pointer; /* Cursor change on hover */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.nav-items ul li:hover {
+  background-color: #f0f0f0; /* Background change on hover */
+  color: #0073e6; /* Text color change on hover */
+}
+
+/* Restaurant Card */
+.res-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  margin: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.res-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.res-logo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.res-info {
+  padding: 10px;
+}
+
+.res-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.res-cuisines,
+.res-rating,
+.res-delivery-time {
+  font-size: 14px;
+  margin: 3px 0;
+}
+
+/* Search */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.search-box {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  width: 200px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+/* Filter Button */
+.filter-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+/* Shimmer */
+.shimmer-card {
+  margin: 20px;
+  width: 200px;
+  height: 400px;
+  background-color: #f0f0f0;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Filter */
+.filter {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+/* Restaurant Container */
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
