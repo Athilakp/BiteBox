@@ -11,7 +11,7 @@
 }
 
 .logo-container img {
-  width: 120px; /* Slightly larger logo */
+  width: 70px; /* Slightly larger logo */
   object-fit: cover;
 }
 
@@ -153,4 +153,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.user-card {
+  padding: 10px;
+  border: 1px solid black;
 }
