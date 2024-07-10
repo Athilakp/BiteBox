@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -9,11 +9,10 @@ const Body = () => {
   const [filteredRes, setFilteredRes] = useState([]);
 
   const [searchText, setSearchText] = useState("");
-
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
   useEffect(() => {
     fetchData();
   }, []);
-
   const fetchData = async () => {
     const response = await fetch(RESTAURANT_API);
     const data = await response.json();
@@ -74,7 +73,11 @@ const Body = () => {
               key={restaurant.info.id}
               to={`/restaurant/${restaurant.info.id}`}
             >
-              <RestaurantCard resData={restaurant} />
+              {restaurant.info.avgRating > 4.3 ? (
+                <RestaurantCardPromoted resData={restaurant} />
+              ) : (
+                <RestaurantCard resData={restaurant} />
+              )}
             </Link>
           ))
         ) : (

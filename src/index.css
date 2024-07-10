@@ -159,3 +159,107 @@
   padding: 10px;
   border: 1px solid black;
 }
+.promoted-label {
+  position: absolute;
+  background-color: black;
+  color: white;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 7px;
+}
+
+.menu {
+  text-align: center;
+}
+.menu-heading {
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 10px;
+}
+.menu-cuisines {
+  font-weight: bold;
+  font-size: large;
+}
+.category {
+  width: 50%; /* equivalent to w-6/12 */
+  margin-left: auto; /* equivalent to mx-auto */
+  margin-right: auto; /* equivalent to mx-auto */
+  margin-top: 1rem; /* equivalent to my-4 */
+  margin-bottom: 1rem; /* equivalent to my-4 */
+  background-color: #f9fafb; /* equivalent to bg-gray-50 */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* equivalent to shadow-lg */
+  padding: 1rem; /* equivalent to p-4 */
+}
+.category-item {
+  display: flex; /* equivalent to flex */
+  justify-content: space-between; /* equivalent to justify-between */
+  cursor: pointer;
+}
+.category-title {
+  font-weight: bold;
+  font-size: medium;
+}
+.items-div {
+  display: flex;
+  justify-content: space-between; /* Align items to the start and end of the container */
+  padding: 0.5rem; /* equivalent to p-2 */
+  margin: 0.5rem; /* equivalent to m-2 */
+  border-bottom-width: 2px; /* equivalent to border-b-2 */
+  border-bottom-color: #e5e7eb; /* equivalent to border-gray-200 */
+  border-bottom-style: solid;
+  text-align: left;
+}
+
+.desc {
+  font-size: small;
+}
+
+.item-detail {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+  width: 75%; /* Adjusted width */
+}
+
+.img-div {
+  width: 25%; /* Adjusted width */
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end; /* Align image to the end (right side) */
+  align-items: flex-start; /* Align image to the start (top side) */
+}
+
+.img-item {
+  max-width: 150px; /* Increased max-width for the image */
+  max-height: 100px; /* Example max height */
+}
+.add-btn-div {
+  position: absolute;
+}
+.add-btn {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.arrow {
+  cursor: pointer;
+}
+.cart {
+  text-align: center;
+}
+.cart-item {
+  width: 50%; /* equivalent to w-6/12 */
+  margin: 0 auto; /* equivalent to m-auto */
+}
+.clearCart {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.cart-btn {
+  text-align: center;
+}
+.emty-msg {
+  text-align: center;
+}

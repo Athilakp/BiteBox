@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import Body from "./components/Body";
 import RestaurantMenu from "./components/RestaurantMenu";
+import Cart from "./components/Cart";
 const About = lazy(() => import("./components/About"));
 const appRouter = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const appRouter = createBrowserRouter([
           </Suspense>
         ),
       },
+      { path: "/cart", element: <Cart /> },
       { path: "/contact", element: <Contact /> },
       { path: "/restaurant/:resId", element: <RestaurantMenu /> },
     ],
